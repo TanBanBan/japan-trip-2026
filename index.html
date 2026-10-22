@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Japan 2026</title>
+<style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#222;background:#f6f5f2}*{box-sizing:border-box}body{margin:0}header{padding:24px 16px 12px;max-width:1050px;margin:auto}.header-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}h1{margin:0;font-size:28px}header p{margin:6px 0;color:#666}.add-attraction-btn{min-height:42px;border:0;border-radius:10px;background:#222;color:#fff;padding:10px 14px;font-weight:700;cursor:pointer}.add-attraction-btn:hover{background:#111}.add-panel{max-width:1050px;margin:0 auto 8px;padding:0 16px}.add-form{background:#fff;border:1px solid #ddd;border-radius:14px;padding:14px;display:grid;gap:12px}.add-form[hidden]{display:none}.add-form h2{margin:0;font-size:18px}.form-row{display:grid;gap:5px}.form-row label,.tags-label{font-size:12px;color:#666;font-weight:700}.optional-note{font-weight:400;color:#888}.add-ratings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.add-rating-box{border:1px solid #ddd;border-radius:10px;padding:9px;background:#fafafa}.add-rating-box .label{font-size:12px;font-weight:700;margin-bottom:5px}.add-rating-select{width:100%;min-height:40px;border:1px solid #cfcfcf;border-radius:8px;background:#fff;padding:8px;font:inherit}.add-image-box{border:1px dashed #bbb;border-radius:10px;padding:10px;background:#fafafa}.add-image-box input[type=file]{width:100%;font:inherit;font-size:14px}.text-input,.text-area{width:100%;border:1px solid #cfcfcf;border-radius:9px;background:#fff;padding:10px;font:inherit;color:#222}.text-area{min-height:90px;resize:vertical}.tag-options{display:flex;flex-wrap:wrap;gap:7px}.tag-check{position:absolute;opacity:0;pointer-events:none}.tag-choice{display:inline-flex;align-items:center;min-height:38px;padding:7px 10px;border:1px solid #ccc;border-radius:999px;background:#fafafa;font-size:13px;cursor:pointer}.tag-check:checked + .tag-choice{background:#222;color:#fff;border-color:#222}.form-actions{display:flex;gap:8px;flex-wrap:wrap}.save-attraction{min-height:40px;border:0;border-radius:9px;background:#222;color:#fff;padding:9px 13px;font-weight:700;cursor:pointer}.cancel-attraction{min-height:40px;border:1px solid #bbb;border-radius:9px;background:#fff;padding:9px 13px;font-weight:650;cursor:pointer}.form-status{font-size:12px;color:#777;min-height:16px}.filters{max-width:1050px;margin:0 auto;padding:4px 16px 8px;display:grid;grid-template-columns:minmax(180px,2fr) repeat(5,minmax(120px,1fr)) auto;gap:8px;align-items:end}.filter-group{display:grid;gap:4px}.filter-group label{font-size:12px;color:#666;font-weight:600}.filter-control{width:100%;min-height:42px;border:1px solid #cfcfcf;border-radius:9px;background:#fff;padding:9px 10px;font:inherit;color:#222}.clear-btn{min-height:42px;border:1px solid #bbb;border-radius:9px;background:#fff;padding:9px 12px;font-weight:600;cursor:pointer}.clear-btn:hover{background:#f2f2f2}.result-count{max-width:1050px;margin:0 auto;padding:2px 16px 4px;font-size:13px;color:#666}.grid{max-width:1050px;margin:auto;padding:12px 16px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}.card{background:white;border:1px solid #ddd;border-radius:16px;padding:14px;overflow:hidden}.card h2{margin:0 0 6px;font-size:21px}.meta{display:flex;gap:7px;flex-wrap:wrap;margin:7px 0 11px}.tag{font-size:12px;background:#f0efeb;padding:4px 8px;border-radius:999px}.desc{line-height:1.45;color:#444;margin:0 0 8px}.best-time{display:inline-flex;align-items:center;margin:2px 0 10px;font-size:20px;line-height:1}.best-time.fixed{font-size:12px;font-weight:750;color:#555;background:#f2f2f2;border:1px solid #ddd;border-radius:999px;padding:5px 9px}.important-note{margin:0 0 14px;padding:9px 10px;border-left:3px solid #c94a4a;border-radius:7px;background:#fff4f4;color:#a22b2b;font-size:13px;line-height:1.4}.card-actions{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px}.edit-attraction{min-height:38px;border:1px solid #bbb;border-radius:9px;background:#fff;color:#333;padding:8px 11px;font-weight:650;cursor:pointer}.edit-attraction:hover{background:#f4f4f4}.card-action-buttons{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.delete-attraction{min-height:38px;border:1px solid #d6a1a1;border-radius:9px;background:#fff;color:#a22b2b;padding:8px 11px;font-weight:650;cursor:pointer}.delete-attraction:hover{background:#fff4f4}.photos{display:block;margin:0 0 10px}.photos:empty{display:none}.photo-wrap{position:relative;overflow:hidden;border-radius:12px;background:#eee}.photo{width:100%;aspect-ratio:16/9;object-fit:cover;background:#eee;display:block}.delete-photo{position:absolute;top:8px;right:8px;width:34px;height:34px;border:1px solid rgba(255,255,255,.35);border-radius:999px;background:rgba(0,0,0,.62);color:#fff;font-size:20px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;backdrop-filter:blur(4px)}.delete-photo:focus-visible{outline:2px solid #fff;outline-offset:2px}.upload-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 14px}.upload-label{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:9px 13px;border:1px dashed #aaa;border-radius:10px;background:#fafafa;font-size:14px;font-weight:650;cursor:pointer}.upload-label:hover{background:#f2f2f2;border-color:#888}.upload-label.disabled{opacity:.5;cursor:not-allowed}.upload-input{display:none}.image-status{font-size:12px;color:#777}.ratings{display:grid;gap:7px}.rating{display:flex;align-items:center;gap:7px}.who{width:20px;font-weight:700}.stars{display:flex;gap:1px}.star{border:0;background:none;padding:2px;font-size:25px;line-height:1;cursor:pointer;color:#d1d5db;opacity:.35}.rating[data-person="t"] .star.on{color:#e11d48;opacity:1}.rating[data-person="i"] .star.on{color:#2563eb;opacity:1}.rating[data-person="o"] .star.on{color:#16a34a;opacity:1}.star:focus-visible,.upload-label:focus-within,.filter-control:focus-visible,.clear-btn:focus-visible{outline:2px solid #555;outline-offset:2px}.status{font-size:12px;color:#777;min-height:16px}.error{max-width:1050px;margin:10px auto;padding:12px 16px;color:#9b1c1c}.loading{max-width:1050px;margin:auto;padding:20px 16px;color:#666}.empty{max-width:1050px;margin:auto;padding:30px 16px;color:#666;text-align:center}
+@media(max-width:800px){.filters{grid-template-columns:1fr 1fr}.filters .search-group{grid-column:1/-1}.clear-btn{width:100%}}
+@media(max-width:420px){.filters{grid-template-columns:1fr}.filters .search-group{grid-column:auto}.grid{grid-template-columns:1fr;padding-left:10px;padding-right:10px}.card{padding:12px}.photo{aspect-ratio:16/10}.star{font-size:24px}}
+.attraction-link{color:#1d4ed8;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:3px}.attraction-link::after{content:" ↗";font-size:.72em;font-weight:700;white-space:nowrap}.attraction-link:hover,.attraction-link:focus{color:#1e40af;text-decoration-thickness:2px}
+.required-mark{color:#b42318;font-weight:800}.required-note{font-size:.78rem;color:#7a3b35;margin:0 0 10px}.visited-toggle{display:inline-flex;align-items:center;gap:6px;min-height:32px;margin:0;font-size:13px;font-weight:650;color:#555;cursor:pointer}.visited-toggle input{width:20px;height:20px;accent-color:#333}.visited-toggle input:focus-visible{outline:2px solid #555;outline-offset:2px}
+[hidden]{display:none!important}
+.trip-tabs{max-width:1050px;margin:6px auto 16px;padding:0 16px;display:flex;gap:6px;flex-wrap:wrap;border-bottom:1px solid #ddd}
+.trip-tabs button{font:inherit;min-height:46px;padding:10px 14px;border:0;border-bottom:3px solid transparent;background:transparent;color:#666;cursor:pointer;font-weight:650}
+.trip-tabs button[aria-selected=true]{color:#222;border-bottom-color:#222}
+.trip-tabs button:focus-visible,.planning-panel :focus-visible{outline:2px solid #2563eb;outline-offset:3px}
+.planning-panel{max-width:1050px;margin:auto;padding:0 16px 40px}.planning-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}.planning-heading h2{margin:0;font-size:23px}.planning-heading p,.planning-help{color:#666;font-size:14px;line-height:1.5}.planning-add{background:#fff;border:1px solid #ddd;border-radius:14px;padding:14px;display:grid;gap:8px;margin:12px 0}.planning-add>label,.packing-person>label{font-size:13px;font-weight:650}.planning-input-row{display:flex;gap:8px}.planning-input-row input{min-width:0}.planning-input-row button{flex-shrink:0}.planning-status{font-size:14px;min-height:22px;line-height:1.5}.planning-status[data-error=true]{color:#9b1c1c}.arrangement-scroll{overflow-x:auto;border:1px solid #ddd;border-radius:14px;background:white}.arrangement-table{width:100%;min-width:730px;border-collapse:collapse;text-align:left}.arrangement-table th,.arrangement-table td{padding:14px;border-bottom:1px solid #e5e5e5;vertical-align:top}.arrangement-table thead{background:#f0efeb}.arrangement-table tbody th{width:19%;overflow-wrap:anywhere}.arrangement-table td{width:23%}.arrangement-table td:last-child{width:auto}.arrangement-table tr:last-child>*{border-bottom:0}.arrangement-cell{display:grid;gap:10px}.done-label,.all-travelers,.packing-item-label{display:flex;gap:9px;align-items:center}.planning-panel input[type=checkbox]{width:20px;height:20px;accent-color:#333;flex-shrink:0}.remarks-label{font-size:12px;color:#666;display:grid;gap:5px}.arrangement-cell textarea{min-height:76px;font-size:14px}.planning-delete{min-height:38px;padding:8px 10px;border:1px solid #d6a1a1;border-radius:9px;background:white;color:#a22b2b;cursor:pointer;font:inherit;font-size:13px}.packing-person{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.packing-person select{width:auto;min-width:160px}.packing-person span{font-size:14px;color:#666}.packing-list{list-style:none;padding:0;margin:0;display:grid;gap:8px}.packing-list li{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px;background:white;border:1px solid #ddd;border-radius:12px}.packing-item-label{flex:1;min-width:0}.packing-item-label span{overflow-wrap:anywhere}.packing-item-label input:checked+span{text-decoration:line-through;color:#777}.packing-empty{color:#666}.packing-category{margin:20px 0 7px;padding:9px 12px;background:#eae8e2;border-radius:9px;font-weight:750;display:flex;justify-content:space-between;align-items:center}.packing-category select{max-width:170px}.packing-item-actions{display:flex;gap:6px;flex-wrap:wrap}.packing-item-main{display:flex;align-items:center;gap:8px;flex-wrap:wrap;flex:1;min-width:0}.packing-category-select{font-size:12px;min-height:32px;width:auto;max-width:145px;padding:4px 6px}.packing-group-controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.packing-group-controls select{max-width:200px}.packing-group-controls input{max-width:190px}.all-travelers{font-size:14px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}button:disabled{opacity:.55;cursor:wait}
+.debt-fields{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.debt-fields label{display:grid;gap:5px;font-size:13px;font-weight:650}.debt-settlements{display:grid;grid-template-columns:1fr 1fr;gap:12px}.debt-summary{padding:16px;border:1px solid #ddd;border-radius:14px;background:#fff}.debt-summary h3{margin:0 0 12px}.debt-summary ul{margin:0;padding-left:20px;line-height:1.8}.debt-list{list-style:none;padding:0;display:grid;gap:10px}.debt-entry{padding:14px;border:1px solid #ddd;border-radius:14px;background:#fff}.debt-entry-top{display:flex;align-items:start;justify-content:space-between;gap:12px}.debt-entry p{margin:6px 0;color:#666;overflow-wrap:anywhere}.debt-conversion{display:flex;align-items:end;flex-wrap:wrap;gap:8px;margin-top:12px}.debt-conversion label{display:grid;gap:5px;font-size:13px}.debt-conversion input{max-width:190px}.debt-note-empty{color:#666}
+@media(max-width:520px){.trip-tabs{gap:0;padding:0 8px}.trip-tabs button{font-size:13px;padding:10px 9px}.planning-input-row{flex-wrap:wrap}.planning-input-row input{flex-basis:100%}.planning-heading{align-items:flex-start}.planning-heading .clear-btn{width:auto;flex-shrink:0}.planning-panel{padding:0 10px 30px}.debt-fields{grid-template-columns:1fr 1fr}.debt-settlements{grid-template-columns:1fr}}
+
+
+/* Warm minimal trip UI */
+:root{background:#f6f5f1;color:#27332e}body{background:#f6f5f1}header{padding-top:19px}header h1{color:#263d32}.trip-tabs{position:sticky;top:0;z-index:20;background:#f6f5f1;border-bottom:1px solid #d6ded5;box-shadow:0 3px 10px #233b2c0b}.trip-tabs button[aria-selected=true]{color:#245d45;border-bottom-color:#43896a}.planning-panel .planning-heading h2{color:#284b3a}.planning-add,.card,.packing-list li:not(.packing-category),.debt-summary,.debt-entry{border-color:#dbe3d9;box-shadow:0 2px 9px #243d2d08}.save-attraction,.add-attraction-btn{background:#315f49}.save-attraction:hover,.add-attraction-btn:hover{background:#244b39}.filter-control:focus,.text-input:focus,.text-area:focus{outline:2px solid #548d71;outline-offset:1px}.planning-status{font-weight:550}.packing-person{display:grid;gap:9px;margin:15px 0}.traveler-switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.traveler-choice{border:2px solid #d9dfd8;background:white;border-radius:13px;min-height:72px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font:inherit}.traveler-choice strong{font-size:17px}.traveler-choice small{font-size:12px}.traveler-choice[data-person=o].active{background:#e0f0e5;border-color:#438b62;color:#20563b}.traveler-choice[data-person=i].active{background:#e4edfa;border-color:#5887bd;color:#28598c}.traveler-choice[data-person=t].active{background:#fae6ed;border-color:#c76e8d;color:#8e3657}.traveler-context{padding:12px 14px;background:#e9f0e8;border-radius:11px;font-size:14px}.packing-toolbar{display:flex;gap:9px;flex-wrap:wrap;align-items:center}.packing-category{cursor:pointer;border:1px solid #d5dfd5;background:#e8eee6!important;color:#294b38;margin-top:13px!important;min-height:49px}.packing-category button{display:flex;justify-content:space-between;align-items:center;width:100%;border:0;background:transparent;font:inherit;font-weight:750;text-align:left;cursor:pointer;color:inherit}.packing-category .category-count{font-size:12px;font-weight:600;color:#54725f}.packing-list li{min-height:55px}.packing-item-actions button{min-height:40px}.arrangement-table thead th:nth-child(2),.arrangement-table td:nth-child(2){background:#eaf4ec}.arrangement-table thead th:nth-child(3),.arrangement-table td:nth-child(3){background:#eaf0fa}.arrangement-table thead th:nth-child(4),.arrangement-table td:nth-child(4){background:#f9ebf0}.arrangement-table thead th{font-size:16px}.arrangement-table tbody th{position:sticky;left:0;background:#fff;z-index:2}.arrangement-table td textarea{background:#ffffffed}.arrangement-table td input[type=checkbox]{accent-color:#397e5b}.packing-progress-bar{height:8px;background:#dce5dc;border-radius:20px;overflow:hidden}.packing-progress-bar span{display:block;height:100%;background:#428b66;transition:width .2s}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#244a37;color:white;padding:11px 18px;border-radius:10px;box-shadow:0 6px 22px #0003;z-index:100;max-width:90vw;font-size:14px}
+@media(max-width:680px){.arrangement-scroll{overflow:visible;border:0;background:transparent}.arrangement-table{min-width:0;display:block}.arrangement-table thead{display:none}.arrangement-table tbody{display:grid;gap:13px}.arrangement-table tr{display:grid;background:#fff;border:1px solid #dce5da;border-radius:13px;overflow:hidden}.arrangement-table tbody th{width:auto;position:static;font-size:17px;background:#e8eee6;padding:13px}.arrangement-table td{width:auto!important;padding:10px 13px}.arrangement-table td:nth-child(2):before{content:'Orr';font-weight:750;color:#276142}.arrangement-table td:nth-child(3):before{content:'Itay';font-weight:750;color:#35669d}.arrangement-table td:nth-child(4):before{content:'Tan';font-weight:750;color:#a04b6a}.arrangement-cell{margin-top:7px;grid-template-columns:1fr 2fr;align-items:center}.arrangement-cell textarea{min-height:52px}.arrangement-table td:last-child{background:white;text-align:right}.traveler-choice{min-height:66px}.packing-item-main{flex-basis:100%}.packing-list li:not(.packing-category){flex-wrap:wrap}.packing-item-actions{width:100%;justify-content:flex-end}.packing-category-select{max-width:180px}}
+
+/* Clear separation of packing controls */
+.packing-tools-card{margin:16px 0;padding:15px;border:1px solid #d9e1d8;border-radius:14px;background:#fff;display:grid;gap:13px}
+.packing-tools-card h3,.packing-add-card h3{font-size:17px;margin:0;color:#284b3a}
+.packing-filter-line,.packing-category-creator{display:grid;gap:7px;min-width:0}
+.packing-filter-line label,.packing-category-creator label,.packing-add-card>label:not(.all-travelers){font-size:13px;font-weight:700;color:#40544a}
+.packing-category-creator{border-top:1px solid #e5ebe4;padding-top:13px}
+.packing-create-line{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:9px;align-items:center}
+.packing-create-line .text-input{min-width:0;max-width:none}
+.packing-create-line button{width:auto;white-space:nowrap;min-width:94px}
+.packing-add-card{gap:9px;margin-top:16px}
+.packing-add-card .save-attraction{justify-self:start;min-width:128px}
+.packing-add-card .planning-help{margin:0;font-size:13px}
+/* Compact arrangements: three concise traveler rows per arrangement */
+@media(max-width:680px){
+ .arrangement-table tbody{gap:10px}
+ .arrangement-table tr{border-radius:12px}
+ .arrangement-table tbody th{font-size:15px;padding:10px 12px}
+ .arrangement-table td{padding:7px 11px!important;display:grid;grid-template-columns:78px minmax(0,1fr);gap:8px;align-items:center}
+ .arrangement-table td:nth-child(2):before,.arrangement-table td:nth-child(3):before,.arrangement-table td:nth-child(4):before{font-size:13px;line-height:1.2}
+ .arrangement-cell{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:9px;align-items:center;min-width:0}
+ .arrangement-cell .done-label{font-size:12px;gap:5px;white-space:nowrap}
+ .arrangement-cell .remarks-label{min-width:0;font-size:0;gap:0}
+ .arrangement-cell .remarks-label textarea{width:100%;min-height:39px;height:39px;padding:8px 9px;font-size:13px;resize:vertical}
+
+ .packing-tools-card{padding:13px}
+}
+@media(max-width:380px){.arrangement-table td{grid-template-columns:65px minmax(0,1fr);gap:5px}.arrangement-cell{gap:5px}.arrangement-cell .done-label{font-size:11px}}
+
+/* Login screen and compact arrangement actions */
+.auth-screen{min-height:100vh;display:grid;place-items:center;padding:22px;background:#f6f5f1}
+.auth-card{width:min(100%,390px);padding:30px 24px;border:1px solid #d8e2d8;border-radius:20px;background:#fff;box-shadow:0 12px 45px #243d2d12;display:grid;gap:12px}
+.auth-lock{text-align:center;font-size:28px}.auth-card h1{text-align:center;color:#294c3a}.auth-card p{text-align:center;color:#637166;margin:0 0 8px}.auth-card label{font-size:13px;font-weight:700}.auth-card .save-attraction{min-height:46px;margin-top:5px}.auth-card #auth-status{color:#a22b2b;font-size:13px;min-height:18px}.header-buttons{display:flex;gap:8px;align-items:center}.header-buttons #auth-logout{width:auto}.arrangement-title-row{display:flex;align-items:center;justify-content:space-between;gap:8px}.arrangement-title-row .planning-delete{min-height:30px;padding:5px 9px;font-size:12px;font-weight:600;flex-shrink:0}.arrangement-table th:last-child,.arrangement-table td:last-child{width:auto}.arrangement-table thead th:last-child{display:table-cell}
+@media(max-width:680px){.arrangement-table tbody th{display:block!important}.arrangement-title-row{width:100%}.arrangement-table td:nth-child(4){border-bottom:0}.arrangement-table td:last-child{background:#f9ebf0;text-align:left}.arrangement-table td:last-child:before{content:'Tan';font-weight:750;color:#a04b6a;font-size:13px}.arrangement-table tbody tr{gap:0}}
+#packing-traveler{display:none!important}
+.packing-progress-inline{display:flex;flex-direction:column;gap:5px;min-width:125px;flex:1;max-width:210px;font-size:13px;font-weight:650;color:#315f49}.packing-progress-inline .packing-progress-bar{width:100%}
+</style>
+</head>
+<body>
+<div id="auth-screen" class="auth-screen"><form id="auth-form" class="auth-card"><div class="auth-lock">🔒</div><h1>Japan 2026</h1><p>Private trip planner · Orr, Itay & Tan</p><label for="auth-email">Shared email</label><input id="auth-email" class="text-input" type="email" autocomplete="username" required placeholder="Email"><label for="auth-password">Password</label><input id="auth-password" class="text-input" type="password" autocomplete="current-password" required placeholder="Password"><button id="auth-submit" class="save-attraction" type="submit">Unlock trip planner</button><p id="auth-status" role="status" aria-live="polite"></p></form></div>
+<div id="protected-app" hidden>
+<header><div class="header-row"><div><h1>Japan 2026 🇯🇵</h1><p id="trip-subtitle">Places & experiences · tap a star to change a rating</p></div><div class="header-buttons"><button id="show-add" class="add-attraction-btn" type="button">＋ Add attraction</button><button id="auth-logout" class="clear-btn" type="button">Lock</button></div></div></header>
+<nav class="trip-tabs" role="tablist" aria-label="Trip sections">
+  <button id="tab-attractions" role="tab" aria-selected="true" aria-controls="panel-attractions" type="button">Attractions</button>
+  <button id="tab-arrangements" role="tab" aria-selected="false" aria-controls="panel-arrangements" tabindex="-1" type="button">Pre-trip arrangements</button>
+  <button id="tab-packing" role="tab" aria-selected="false" aria-controls="panel-packing" tabindex="-1" type="button">Packing</button>
+  <button id="tab-debts" role="tab" aria-selected="false" aria-controls="panel-debts" tabindex="-1" type="button">Debts</button>
+</nav>
+<section id="panel-arrangements" class="planning-panel" role="tabpanel" aria-labelledby="tab-arrangements" hidden>
+  <div class="planning-heading"><div><h2>Pre-trip arrangements</h2><p>Check off each traveler's arrangements and add individual remarks.</p></div><button class="clear-btn" id="refresh-arrangements" type="button">Refresh</button></div>
+  <form id="arrangement-form" class="planning-add"><label for="arrangement-name">New arrangement</label><div class="planning-input-row"><input class="text-input" id="arrangement-name" maxlength="160" required placeholder="e.g. Airport transfer"><button class="save-attraction" type="submit">Add arrangement</button></div></form>
+  <p id="arrangements-status" class="planning-status" role="status" aria-live="polite"></p>
+  <div class="arrangement-scroll" role="region" aria-label="Arrangements for all travelers" tabindex="0"><table class="arrangement-table"><caption class="sr-only">Arrangements, completion and remarks for Orr, Itay and Tan</caption><thead><tr><th scope="col">Arrangement</th><th scope="col">Orr</th><th scope="col">Itay</th><th scope="col">Tan</th></tr></thead><tbody id="arrangement-rows"></tbody></table></div>
+  <p class="planning-help">Remarks save when you leave the field. Deleting an arrangement removes it for all three travelers.</p>
+</section>
+<section id="panel-packing" class="planning-panel" role="tabpanel" aria-labelledby="tab-packing" hidden>
+  <div class="planning-heading"><div><h2>Packing</h2><p>A separate luggage checklist for each traveler.</p></div><button class="clear-btn" id="refresh-packing" type="button">Refresh</button></div>
+  <div class="packing-person"><strong>Select traveler — whose packing list?</strong><div id="traveler-switch" class="traveler-switch" role="group" aria-label="Select packing traveler"><button class="traveler-choice active" data-person="o" type="button" aria-pressed="true"><strong>Orr</strong><small>Selected ✓</small></button><button class="traveler-choice" data-person="i" type="button" aria-pressed="false"><strong>Itay</strong><small>Select</small></button><button class="traveler-choice" data-person="t" type="button" aria-pressed="false"><strong>Tan</strong><small>Select</small></button></div><div id="traveler-context" class="traveler-context">Editing Orr’s packing list</div><label for="packing-traveler" class="sr-only">Traveler</label><select id="packing-traveler" class="filter-control" hidden aria-hidden="true" tabindex="-1"><option value="o" selected>Orr</option><option value="i">Itay</option><option value="t">Tan</option></select></div>
+  <section class="packing-tools-card" aria-label="Packing category tools">
+    <div class="packing-category-creator"><label for="packing-new-category">Create a new category</label><div class="packing-create-line"><input id="packing-new-category" class="text-input" maxlength="80" placeholder="Category name"><button id="packing-add-category" type="button" class="clear-btn">Create</button></div></div>
+  </section>
+  <form id="packing-form" class="planning-add packing-add-card">
+    <h3>Add packing item</h3>
+    <label for="packing-name">Item name</label><input class="text-input" id="packing-name" maxlength="160" required placeholder="e.g. Passport">
+    <label for="packing-add-category-select">Category</label><select id="packing-add-category-select" class="filter-control"></select>
+    <label class="all-travelers"><input id="packing-all" type="checkbox"> Add to all three travelers (Orr, Itay, Tan)</label>
+    <p id="packing-add-target" class="planning-help">New item will be added to Orr only.</p>
+    <button class="save-attraction" type="submit">Add item</button>
+  </form>
+  <p id="packing-status" class="planning-status" role="status" aria-live="polite"></p>
+  <div class="packing-toolbar"><button id="packing-deselect" class="clear-btn" type="button" disabled>Deselect all for this traveler</button><div class="packing-progress-inline"><span id="packing-progress"></span><div class="packing-progress-bar" aria-hidden="true"><span id="packing-progress-fill" style="width:0%"></span></div></div><label class="all-travelers"><input id="packing-unpacked-only" type="checkbox"> Unpacked only</label><button id="packing-expand" class="clear-btn" type="button">Expand all</button><button id="packing-collapse" class="clear-btn" type="button">Collapse all</button></div><ul id="packing-rows" class="packing-list" aria-label="Packing items"></ul>
+  <p class="planning-help">Deleting an item only removes that traveler's copy. Everyone can edit all three travelers. Use Refresh to see changes made on another device.</p>
+</section>
+<section id="panel-debts" class="planning-panel" role="tabpanel" aria-labelledby="tab-debts" hidden>
+  <div class="planning-heading"><div><h2>Trip debts</h2><p>Record what one traveler paid for another, then see how to settle up.</p></div><button id="refresh-debts" class="clear-btn" type="button">Refresh</button></div>
+  <form id="debt-form" class="planning-add">
+    <div class="debt-fields">
+      <label>Paid by<select id="debt-payer" class="filter-control"><option value="o">Orr</option><option value="i">Itay</option><option value="t">Tan</option></select></label>
+      <label>Paid for<select id="debt-beneficiary" class="filter-control"><option value="i">Itay</option><option value="t">Tan</option><option value="o">Orr</option></select></label>
+      <label>Currency<select id="debt-currency" class="filter-control"><option value="ILS">ILS</option><option value="JPY">JPY*</option></select></label>
+      <label>Amount<input id="debt-amount" class="text-input" type="number" min="0.01" step="0.01" max="99999999.99" required inputmode="decimal"></label>
+    </div>
+    <label for="debt-note">What was this for? (optional)</label><input id="debt-note" class="text-input" maxlength="300" placeholder="e.g. Itay's share of dinner">
+    <p class="planning-help">Enter only the amount paid for the selected traveler, excluding your own share. For more than one traveler, add each person's share separately. To record a repayment, choose the person sending money as Paid by and the recipient as Paid for.</p>
+    <div><button type="submit" class="save-attraction">Add payment</button></div>
+  </form>
+  <p id="debts-status" class="planning-status" role="status" aria-live="polite"></p>
+  <h3>Payments</h3><ul id="debt-rows" class="debt-list" aria-label="Recorded trip payments"></ul>
+  <div id="debt-settlements" class="debt-settlements" aria-live="polite"></div>
+  <p class="planning-help">Suggested payments net all three travelers' balances, so the recipient can differ from the original payer.</p>
+  <p class="planning-help"><strong>JPY*</strong> is provisional yen, kept separate from ILS. Enter the actual ILS equivalent on a yen entry when settling. That entry then moves into the ILS calculation. Its original yen amount stays visible; no exchange rate is assumed.</p>
+</section>
+
+<section id="panel-attractions" role="tabpanel" aria-labelledby="tab-attractions">
+<section class="add-panel" aria-label="Add attraction">
+  <form id="add-form" class="add-form" hidden><div class="required-note"><span class="required-mark">*</span> Required</div>
+    <h2>Add attraction</h2>
+    <div class="form-row"><label for="new-name">Name <span class="required-mark" aria-hidden="true">*</span></label><input id="new-name" class="text-input" type="text" required maxlength="160"></div>
+    <div class="form-row"><label for="new-description">Description <span class="required-mark" aria-hidden="true">*</span></label><textarea id="new-description" class="text-area" required maxlength="1200"></textarea></div>
+    <div class="form-row"><label for="new-important-note">Important note <span class="optional-note">(optional)</span></label><textarea id="new-important-note" class="text-area" maxlength="600" placeholder="Tickets, registration, date restrictions, etc."></textarea></div>
+    <div class="form-row"><span class="tags-label">Tags <span class="required-mark" aria-hidden="true">*</span></span><div id="tag-options" class="tag-options"></div></div>
+    <div class="form-row"><span class="tags-label">Ratings <span class="optional-note">(optional)</span></span><div class="add-ratings">
+      <div class="add-rating-box"><div class="label">T</div><select id="new-rating-t" class="add-rating-select"><option value="">—</option><option value="1">1★</option><option value="2">2★</option><option value="3">3★</option><option value="4">4★</option><option value="5">5★</option></select></div>
+      <div class="add-rating-box"><div class="label">I</div><select id="new-rating-i" class="add-rating-select"><option value="">—</option><option value="1">1★</option><option value="2">2★</option><option value="3">3★</option><option value="4">4★</option><option value="5">5★</option></select></div>
+      <div class="add-rating-box"><div class="label">O</div><select id="new-rating-o" class="add-rating-select"><option value="">—</option><option value="1">1★</option><option value="2">2★</option><option value="3">3★</option><option value="4">4★</option><option value="5">5★</option></select></div>
+    </div></div>
+    <div class="form-row"><label for="new-image">Image <span class="optional-note">(optional)</span></label><div class="add-image-box"><input id="new-image" type="file" accept="image/*"></div></div>
+    <div class="form-actions"><button class="save-attraction" type="submit">Add</button><button id="cancel-add" class="cancel-attraction" type="button">Cancel</button></div>
+    <div id="add-status" class="form-status" aria-live="polite"></div>
+  </form>
+</section>
+<section class="add-panel" aria-label="Edit attraction">
+  <form id="edit-form" class="add-form" hidden>
+    <h2>Edit attraction</h2>
+    <div class="form-row"><label for="edit-name">Name <span class="required-mark" aria-hidden="true">*</span></label><input id="edit-name" class="text-input" type="text" required maxlength="160"></div>
+    <div class="form-row"><label for="edit-description">Description <span class="required-mark" aria-hidden="true">*</span></label><textarea id="edit-description" class="text-area" required maxlength="1200"></textarea></div>
+    <div class="form-row"><label for="edit-important-note">Important note <span class="optional-note">(optional)</span></label><textarea id="edit-important-note" class="text-area" maxlength="600" placeholder="Tickets, registration, date restrictions, etc."></textarea></div>
+    <div class="form-row"><span class="tags-label">Tags <span class="required-mark" aria-hidden="true">*</span></span><div id="edit-tag-options" class="tag-options"></div></div>
+    
+    <div class="form-actions"><button class="save-attraction" type="submit">Save changes</button><button id="cancel-edit" class="cancel-attraction" type="button">Cancel</button></div>
+    <div id="edit-status" class="form-status" aria-live="polite"></div>
+  </form>
+</section>
+<section class="filters" aria-label="Attraction filters">
+  <div class="filter-group search-group"><label for="search">Search</label><input id="search" class="filter-control" type="search" placeholder="Search attraction name…"></div>
+  <div class="filter-group"><label for="area-filter">Location</label><select id="area-filter" class="filter-control"><option value="">All locations</option></select></div>
+  <div class="filter-group"><label for="category-filter">Type</label><select id="category-filter" class="filter-control"><option value="">All types</option></select></div>
+  <div class="filter-group"><label for="traveler-filter">Traveler</label><select id="traveler-filter" class="filter-control"><option value="">Any traveler</option><option value="rating_t">T</option><option value="rating_i">I</option><option value="rating_o">O</option></select></div>
+  <div class="filter-group"><label for="rating-filter">Interest</label><select id="rating-filter" class="filter-control"><option value="">Any rating</option><option value="3">3★ or more</option><option value="4">4★ or more</option><option value="5">5★ only</option></select></div>
+  <div class="filter-group"><label for="visited-filter">Visited</label><select id="visited-filter" class="filter-control"><option value="unvisited" selected>Not yet visited</option><option value="visited">Visited</option><option value="all">Show all</option></select></div>
+  <button id="clear-filters" class="clear-btn" type="button">Clear</button>
+</section>
+<div id="result-count" class="result-count"></div>
+<div id="message" class="loading">Loading attractions…</div>
+<main id="cards" class="grid"></main>
+</section>
+</div>
+<script>
+const SUPABASE_URL='https://iwmaqyrdfsvpbgedleqs.supabase.co';
+const SUPABASE_KEY='sb_publishable_XENRFKX__L4whWb7h5ic_Q_1oA91vzh';
+const BUCKET='attraction-images';
+const cards=document.getElementById('cards');
+const message=document.getElementById('message');
+const resultCount=document.getElementById('result-count');
+const searchInput=document.getElementById('search');
+const areaFilter=document.getElementById('area-filter');
+const categoryFilter=document.getElementById('category-filter');
+const travelerFilter=document.getElementById('traveler-filter');
+const ratingFilter=document.getElementById('rating-filter');
+const visitedFilter=document.getElementById('visited-filter');
+const clearFilters=document.getElementById('clear-filters');
+const showAdd=document.getElementById('show-add');
+const addForm=document.getElementById('add-form');
+const editForm=document.getElementById('edit-form');
+const editName=document.getElementById('edit-name');
+const editDescription=document.getElementById('edit-description');
+const editImportantNote=document.getElementById('edit-important-note');
+const editTagOptions=document.getElementById('edit-tag-options');
+const editStatus=document.getElementById('edit-status');
+const cancelEdit=document.getElementById('cancel-edit');
+let editingAttractionId=null;
+const cancelAdd=document.getElementById('cancel-add');
+const newName=document.getElementById('new-name');
+const newDescription=document.getElementById('new-description');
+const newImportantNote=document.getElementById('new-important-note');
+const newRatingT=document.getElementById('new-rating-t');
+const newRatingI=document.getElementById('new-rating-i');
+const newRatingO=document.getElementById('new-rating-o');
+const newImage=document.getElementById('new-image');
+const tagOptions=document.getElementById('tag-options');
+const addStatus=document.getElementById('add-status');
+const jsonHeaders={apikey:SUPABASE_KEY,'Content-Type':'application/json'};
+let tripAccessToken=null;
+const nativeFetch=window.fetch.bind(window);
+window.fetch=(input,options={})=>{
+ const url=typeof input==='string'?input:input.url;
+ if(!url.startsWith(SUPABASE_URL+'/'))return nativeFetch(input,options);
+ const headers=new Headers(options.headers||{});
+ headers.set('apikey',SUPABASE_KEY);
+ if(tripAccessToken)headers.set('Authorization','Bearer '+tripAccessToken);
+ else headers.delete('Authorization');
+ return nativeFetch(input,{...options,headers});
+};
+let allRows=[];
+let imagesByAttraction={};
+function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function googleUrl(r){return 'https://www.google.com/search?q='+encodeURIComponent((r.name||'')+' '+(r.area||'Tokyo')+' Japan')}
+function rowTags(r){const vals=[];if(r.category)vals.push(r.category);if(Array.isArray(r.tags))vals.push(...r.tags);return [...new Set(vals.filter(Boolean))];}
+function allKnownTags(){return [...new Set(allRows.flatMap(rowTags))].sort((a,b)=>a.localeCompare(b));}
+function renderTagChoices(){const tags=allKnownTags();tagOptions.innerHTML=tags.map((t,i)=>`<span><input class="tag-check" id="tag-${i}" type="checkbox" value="${esc(t)}"><label class="tag-choice" for="tag-${i}">${esc(t)}</label></span>`).join('');}
+function renderEditTagChoices(selected=[]){const chosen=new Set(selected||[]);const tags=allKnownTags();editTagOptions.innerHTML=tags.map((t,i)=>`<span><input class="tag-check edit-tag-check" id="edit-tag-${i}" type="checkbox" value="${esc(t)}" ${chosen.has(t)?'checked':''}><label class="tag-choice" for="edit-tag-${i}">${esc(t)}</label></span>`).join('');}
+function stars(row,field,label){const val=Number(row[field])||0;let s=`<div class="rating" data-person="${label.toLowerCase()}"><span class="who">${label}</span><div class="stars" role="group" aria-label="${label} rating">`;for(let n=1;n<=5;n++)s+=`<button type="button" class="star ${n<=val?'on':''}" data-id="${row.id}" data-field="${field}" data-value="${n}" aria-label="Set ${label} rating to ${n}">★</button>`;return s+'</div></div>'}
+function photoHtml(images){return images.map(x=>`<div class="photo-wrap"><img class="photo" src="${esc(x.image_url)}" alt="Attraction photo" loading="lazy"><button type="button" class="delete-photo" data-image-id="${x.id}" data-attraction-id="${x.attraction_id}" data-image-url="${esc(x.image_url)}" aria-label="Delete image">×</button></div>`).join('')}
+function populateSelect(select,values){const current=select.value;select.querySelectorAll('option:not(:first-child)').forEach(o=>o.remove());[...new Set(values.filter(Boolean))].sort((a,b)=>a.localeCompare(b)).forEach(v=>{const o=document.createElement('option');o.value=v;o.textContent=v;select.appendChild(o);});if([...select.options].some(o=>o.value===current))select.value=current;}
+function filteredRows(){const q=searchInput.value.trim().toLowerCase();const area=areaFilter.value;const category=categoryFilter.value;const traveler=travelerFilter.value;const minRating=Number(ratingFilter.value)||0;const visitedMode=visitedFilter.value;return allRows.filter(r=>{if(visitedMode==='unvisited'&&r.visited===true)return false;if(visitedMode==='visited'&&r.visited!==true)return false;if(q&&!String(r.name||'').toLowerCase().includes(q))return false;if(area&&r.area!==area)return false;if(category&&!rowTags(r).includes(category))return false;if(minRating){if(traveler){if((Number(r[traveler])||0)<minRating)return false;}else{const best=Math.max(Number(r.rating_t)||0,Number(r.rating_i)||0,Number(r.rating_o)||0);if(best<minRating)return false;}}return true;});}
+function render(){const rows=filteredRows();resultCount.textContent=`${rows.length} of ${allRows.length} attractions`;if(!rows.length){cards.innerHTML='';message.className='empty';message.textContent='No attractions match these filters.';return;}message.textContent='';message.className='';cards.innerHTML=rows.map(r=>{const imgs=imagesByAttraction[r.id]||[];const full=imgs.length>=1;return `<article class="card" data-card="${r.id}">
+<h2><a class="attraction-link" href="${googleUrl(r)}" target="_blank" rel="noopener noreferrer">${esc(r.name)}</a></h2>
+<div class="meta">${r.area?`<span class="tag">${esc(r.area)}</span>`:''}${rowTags(r).map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div>
+${r.best_time?`<div class="best-time ${/[0-9]|TBD|Timed|Nov/.test(r.best_time)?'fixed':''}" aria-label="Best time to visit">${esc(r.best_time)}</div>`:''}
+<div class="photos">${photoHtml(imgs)}</div>
+<div class="upload-row"><label class="upload-label ${full?'disabled':''}">${full?'Image added':'＋ Add image'}<input class="upload-input" type="file" accept="image/*" data-id="${r.id}" ${full?'disabled':''}></label><span class="image-status" aria-live="polite"></span></div>
+<p class="desc">${esc(r.description||'')}</p>
+${r.important_note?`<p class="important-note">⚠ ${esc(r.important_note)}</p>`:''}
+<div class="ratings">${stars(r,'rating_t','T')}${stars(r,'rating_i','I')}${stars(r,'rating_o','O')}<div class="status" aria-live="polite"></div></div>
+<div class="card-actions"><label class="visited-toggle"><input class="visited-checkbox" type="checkbox" data-id="${r.id}" ${r.visited===true?'checked':''}><span>Visited</span></label><div class="card-action-buttons"><button type="button" class="edit-attraction" data-attraction-id="${r.id}">Edit</button><button type="button" class="delete-attraction" data-attraction-id="${r.id}" data-attraction-name="${esc(r.name)}">Delete attraction</button></div></div>
+</article>`}).join('');
+document.querySelectorAll('.star').forEach(b=>b.addEventListener('click',updateRating));
+document.querySelectorAll('.upload-input').forEach(i=>i.addEventListener('change',uploadImage));document.querySelectorAll('.visited-checkbox').forEach(i=>i.addEventListener('change',updateVisited));document.querySelectorAll('.delete-photo').forEach(b=>b.addEventListener('click',deleteImage));document.querySelectorAll('.edit-attraction').forEach(b=>b.addEventListener('click',openEditAttraction));document.querySelectorAll('.delete-attraction').forEach(b=>b.addEventListener('click',deleteAttraction));}
+async function updateVisited(e){const input=e.currentTarget;const id=Number(input.dataset.id);const row=allRows.find(r=>Number(r.id)===id);if(!row)return;const previous=row.visited===true;const next=input.checked;row.visited=next;input.disabled=true;try{const r=await fetch(`${SUPABASE_URL}/rest/v1/attractions?id=eq.${encodeURIComponent(id)}`,{method:'PATCH',headers:{...jsonHeaders,Prefer:'return=minimal'},body:JSON.stringify({visited:next})});if(!r.ok)throw new Error(await r.text());render();}catch(err){row.visited=previous;alert('Could not update visited status.');render();}}
+function applyFilters(){render();}
+async function load(){try{const [ar,ir]=await Promise.all([
+fetch(`${SUPABASE_URL}/rest/v1/attractions?select=*&order=id.asc`,{headers:jsonHeaders}),
+fetch(`${SUPABASE_URL}/rest/v1/attraction_images?select=*&order=attraction_id.asc,sort_order.asc`,{headers:jsonHeaders})
+]);if(!ar.ok)throw new Error(await ar.text());if(!ir.ok)throw new Error(await ir.text());allRows=await ar.json();const images=await ir.json();imagesByAttraction={};for(const img of images)(imagesByAttraction[img.attraction_id]??=[]).push(img);populateSelect(areaFilter,allRows.map(r=>r.area));populateSelect(categoryFilter,allRows.flatMap(rowTags));renderTagChoices();message.textContent='';message.className='';render();}catch(e){message.className='error';message.textContent='Could not load attractions. '+e.message;}}
+async function updateRating(e){const b=e.currentTarget,id=Number(b.dataset.id),field=b.dataset.field,value=Number(b.dataset.value),card=b.closest('.card'),status=card.querySelector('.status');const row=allRows.find(r=>Number(r.id)===id);const previous=row?row[field]:null;if(row)row[field]=value;status.textContent='Saving…';const group=b.parentElement;group.querySelectorAll('.star').forEach(x=>x.classList.toggle('on',Number(x.dataset.value)<=value));try{const r=await fetch(`${SUPABASE_URL}/rest/v1/attractions?id=eq.${encodeURIComponent(id)}`,{method:'PATCH',headers:{...jsonHeaders,Prefer:'return=minimal'},body:JSON.stringify({[field]:value})});if(!r.ok)throw new Error(await r.text());status.textContent='Saved';setTimeout(()=>{if(status.textContent==='Saved')status.textContent=''},1200);if(ratingFilter.value)render();}catch(err){if(row)row[field]=previous;status.textContent='Could not save';render();}}
+function loadBitmap(file){return new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=reject;img.src=URL.createObjectURL(file);});}
+function canvasBlob(canvas,type,quality){return new Promise(resolve=>canvas.toBlob(resolve,type,quality));}
+async function compressImage(file){const img=await loadBitmap(file);let width=img.naturalWidth,height=img.naturalHeight;const maxSide=1400;if(Math.max(width,height)>maxSide){const scale=maxSide/Math.max(width,height);width=Math.round(width*scale);height=Math.round(height*scale);}const canvas=document.createElement('canvas');canvas.width=width;canvas.height=height;const ctx=canvas.getContext('2d');ctx.drawImage(img,0,0,width,height);URL.revokeObjectURL(img.src);let quality=.76;let blob=await canvasBlob(canvas,'image/webp',quality);while(blob&&blob.size>300000&&quality>.46){quality-=.08;blob=await canvasBlob(canvas,'image/webp',quality);}if(!blob)throw new Error('Could not compress image');return blob;}
+async function uploadImage(e){const input=e.currentTarget,file=input.files&&input.files[0];if(!file)return;const card=input.closest('.card'),status=card.querySelector('.image-status'),id=Number(input.dataset.id);input.disabled=true;status.textContent='Compressing…';try{const count=(imagesByAttraction[id]||[]).length;if(count>=1)throw new Error('Only one image allowed');const blob=await compressImage(file);status.textContent=`Uploading ${Math.max(1,Math.round(blob.size/1024))} KB…`;const path=`${id}/${Date.now()}-${Math.random().toString(36).slice(2,8)}.webp`;const upload=await fetch(`${SUPABASE_URL}/storage/v1/object/${BUCKET}/${path}`,{method:'POST',headers:{apikey:SUPABASE_KEY,'Content-Type':'image/webp','x-upsert':'false'},body:blob});if(!upload.ok)throw new Error(await upload.text());const publicUrl=`${SUPABASE_URL}/storage/v1/object/public/${BUCKET}/${path}`;const row=await fetch(`${SUPABASE_URL}/rest/v1/attraction_images`,{method:'POST',headers:{...jsonHeaders,Prefer:'return=minimal'},body:JSON.stringify({attraction_id:id,image_url:publicUrl,sort_order:1})});if(!row.ok)throw new Error(await row.text());(imagesByAttraction[id]??=[]).push({id:null,attraction_id:id,image_url:publicUrl,sort_order:1});await reloadImagesForAttraction(id);render();}catch(err){status.textContent='Could not add image';input.disabled=false;input.value='';}}
+
+async function reloadImagesForAttraction(id){const r=await fetch(`${SUPABASE_URL}/rest/v1/attraction_images?attraction_id=eq.${encodeURIComponent(id)}&select=*&order=sort_order.asc,id.asc`,{headers:jsonHeaders});if(!r.ok)throw new Error(await r.text());imagesByAttraction[id]=await r.json();}
+function storagePathFromPublicUrl(url){const marker=`/storage/v1/object/public/${BUCKET}/`;const i=String(url||'').indexOf(marker);return i>=0?String(url).slice(i+marker.length):null;}
+async function deleteImage(e){const b=e.currentTarget;const imageId=Number(b.dataset.imageId);const attractionId=Number(b.dataset.attractionId);if(!imageId)return;if(!confirm('Delete this image?'))return;b.disabled=true;try{const path=storagePathFromPublicUrl(b.dataset.imageUrl);const delRow=await fetch(`${SUPABASE_URL}/rest/v1/attraction_images?id=eq.${encodeURIComponent(imageId)}`,{method:'DELETE',headers:{...jsonHeaders,Prefer:'return=minimal'}});if(!delRow.ok)throw new Error(await delRow.text());if(path){await fetch(`${SUPABASE_URL}/storage/v1/object/${BUCKET}/${path}`,{method:'DELETE',headers:{apikey:SUPABASE_KEY,Authorization:'Bearer '+SUPABASE_KEY}});}await reloadImagesForAttraction(attractionId);const remaining=imagesByAttraction[attractionId]||[];for(let i=0;i<remaining.length;i++){if(remaining[i].sort_order!==i+1){await fetch(`${SUPABASE_URL}/rest/v1/attraction_images?id=eq.${encodeURIComponent(remaining[i].id)}`,{method:'PATCH',headers:{...jsonHeaders,Prefer:'return=minimal'},body:JSON.stringify({sort_order:i+1})});remaining[i].sort_order=i+1;}}render();}catch(err){alert('Could not delete image.');b.disabled=false;}}
+
+function openEditAttraction(e){
+  const id=Number(e.currentTarget.dataset.attractionId);
+  const row=allRows.find(r=>Number(r.id)===id);
+  if(!row)return;
+  editingAttractionId=id;
+  editName.value=row.name||'';
+  editDescription.value=row.description||'';
+  editImportantNote.value=row.important_note||'';
+  renderEditTagChoices(rowTags(row));
+  editStatus.textContent='';
+  editForm.hidden=false;
+  editForm.scrollIntoView({behavior:'smooth',block:'start'});
+  setTimeout(()=>editName.focus(),250);
+}
+
+async function saveEditedAttraction(e){
+  e.preventDefault();
+  if(!editingAttractionId)return;
+  const name=editName.value.trim();
+  const description=editDescription.value.trim();
+  const important_note=editImportantNote.value.trim()||null;
+  const tags=[...editTagOptions.querySelectorAll('.edit-tag-check:checked')].map(x=>x.value);
+  if(!name||!description){editStatus.textContent='Name and description are required.';return;}
+  if(!tags.length){editStatus.textContent='Choose at least one tag.';return;}
+  const submit=editForm.querySelector('.save-attraction');
+  submit.disabled=true;
+  editStatus.textContent='Saving…';
+  try{
+    const payload={name,description,important_note,tags};
+    const r=await fetch(`${SUPABASE_URL}/rest/v1/attractions?id=eq.${encodeURIComponent(editingAttractionId)}`,{
+      method:'PATCH',headers:{...jsonHeaders,Prefer:'return=representation'},body:JSON.stringify(payload)
+    });
+    if(!r.ok)throw new Error(await r.text());
+    const updated=(await r.json())[0];
+    const idx=allRows.findIndex(x=>Number(x.id)===editingAttractionId);
+    if(idx>=0)allRows[idx]={...allRows[idx],...updated};
+    populateSelect(areaFilter,allRows.map(r=>r.area));
+    populateSelect(categoryFilter,allRows.flatMap(rowTags));
+    renderTagChoices();
+    render();
+    editStatus.textContent='Saved';
+    setTimeout(()=>{editForm.hidden=true;editStatus.textContent='';editingAttractionId=null;},500);
+  }catch(err){
+    console.error(err);
+    editStatus.textContent='Could not save changes.';
+  }finally{submit.disabled=false;}
+}
+
+async function deleteAttraction(e){
+  const b=e.currentTarget;
+  const id=Number(b.dataset.attractionId);
+  const name=b.dataset.attractionName||'this attraction';
+  if(!confirm(`Delete ${name}? This cannot be undone.`))return;
+  b.disabled=true;
+  try{
+    const imgs=[...(imagesByAttraction[id]||[])];
+
+    // Remove image database rows first. This avoids an image relation ever
+    // preventing the attraction itself from being deleted.
+    const imageRows=await fetch(`${SUPABASE_URL}/rest/v1/attraction_images?attraction_id=eq.${encodeURIComponent(id)}`,{
+      method:'DELETE',
+      headers:{...jsonHeaders,Prefer:'return=minimal'}
+    });
+    if(!imageRows.ok)throw new Error('Image record delete failed: '+await imageRows.text());
+
+    // Delete the attraction next. Storage cleanup is deliberately done only
+    // after the database deletion succeeds, so a Storage error cannot block it.
+    const r=await fetch(`${SUPABASE_URL}/rest/v1/attractions?id=eq.${encodeURIComponent(id)}`,{
+      method:'DELETE',
+      headers:{...jsonHeaders,Prefer:'return=minimal'}
+    });
+    if(!r.ok)throw new Error('Attraction delete failed: '+await r.text());
+
+    // Best-effort cleanup of the actual files in Storage.
+    for(const img of imgs){
+      const path=storagePathFromPublicUrl(img.image_url);
+      if(!path)continue;
+      try{
+        await fetch(`${SUPABASE_URL}/storage/v1/object/${BUCKET}/${path}`,{
+          method:'DELETE',
+          headers:{apikey:SUPABASE_KEY,Authorization:'Bearer '+SUPABASE_KEY}
+        });
+      }catch(storageErr){
+        console.warn('Storage cleanup failed for',path,storageErr);
+      }
+    }
+
+    allRows=allRows.filter(x=>Number(x.id)!==id);
+    delete imagesByAttraction[id];
+    populateSelect(areaFilter,allRows.map(r=>r.area));
+    populateSelect(categoryFilter,allRows.flatMap(rowTags));
+    renderTagChoices();
+    render();
+  }catch(err){
+    console.error(err);
+    alert('Could not delete attraction. '+(err&&err.message?err.message:''));
+    b.disabled=false;
+  }
+}
+
+async function addAttraction(e){e.preventDefault();const name=newName.value.trim();const description=newDescription.value.trim();const important_note=newImportantNote.value.trim()||null;const tags=[...tagOptions.querySelectorAll('.tag-check:checked')].map(x=>x.value);const rating_t=newRatingT.value?Number(newRatingT.value):null;const rating_i=newRatingI.value?Number(newRatingI.value):null;const rating_o=newRatingO.value?Number(newRatingO.value):null;const imageFile=newImage.files&&newImage.files[0]?newImage.files[0]:null;if(!name||!description){addStatus.textContent='Name and description are required.';return;}if(!tags.length){addStatus.textContent='Choose at least one tag.';return;}const submit=addForm.querySelector('.save-attraction');submit.disabled=true;addStatus.textContent='Adding…';try{const payload={name,description,tags,important_note,rating_t,rating_i,rating_o};const r=await fetch(`${SUPABASE_URL}/rest/v1/attractions`,{method:'POST',headers:{...jsonHeaders,Prefer:'return=representation'},body:JSON.stringify(payload)});if(!r.ok)throw new Error(await r.text());const created=(await r.json())[0];allRows.push(created);imagesByAttraction[created.id]=[];if(imageFile){addStatus.textContent='Compressing image…';const blob=await compressImage(imageFile);const path=`${created.id}/${Date.now()}-${Math.random().toString(36).slice(2,8)}.webp`;addStatus.textContent='Uploading image…';const upload=await fetch(`${SUPABASE_URL}/storage/v1/object/${BUCKET}/${path}`,{method:'POST',headers:{apikey:SUPABASE_KEY,'Content-Type':'image/webp','x-upsert':'false'},body:blob});if(!upload.ok)throw new Error(await upload.text());const publicUrl=`${SUPABASE_URL}/storage/v1/object/public/${BUCKET}/${path}`;const imgRow=await fetch(`${SUPABASE_URL}/rest/v1/attraction_images`,{method:'POST',headers:{...jsonHeaders,Prefer:'return=representation'},body:JSON.stringify({attraction_id:created.id,image_url:publicUrl,sort_order:1})});if(!imgRow.ok)throw new Error(await imgRow.text());imagesByAttraction[created.id]=await imgRow.json();}allRows.sort((a,b)=>Number(a.id)-Number(b.id));populateSelect(areaFilter,allRows.map(r=>r.area));populateSelect(categoryFilter,allRows.flatMap(rowTags));renderTagChoices();addForm.reset();addStatus.textContent='Added';render();setTimeout(()=>{addForm.hidden=true;addStatus.textContent='';},500);}catch(err){console.error(err);addStatus.textContent='Could not add attraction.';}finally{submit.disabled=false;}}
+showAdd.addEventListener('click',()=>{editForm.hidden=true;editingAttractionId=null;addForm.hidden=false;renderTagChoices();newName.focus();});
+cancelAdd.addEventListener('click',()=>{addForm.reset();addStatus.textContent='';addForm.hidden=true;});
+addForm.addEventListener('submit',addAttraction);
+editForm.addEventListener('submit',saveEditedAttraction);
+cancelEdit.addEventListener('click',()=>{editForm.hidden=true;editStatus.textContent='';editingAttractionId=null;});
+[searchInput,areaFilter,categoryFilter,travelerFilter,ratingFilter,visitedFilter].forEach(el=>el.addEventListener(el===searchInput?'input':'change',applyFilters));
+clearFilters.addEventListener('click',()=>{searchInput.value='';areaFilter.value='';categoryFilter.value='';travelerFilter.value='';ratingFilter.value='';visitedFilter.value='unvisited';render();searchInput.focus();});
+// Initial data loading starts only after a verified session.
+</script>
+<script>
+// Planning data is accessed using the authenticated Supabase session.
+const tripTravelers=[{id:'o',name:'Orr'},{id:'i',name:'Itay'},{id:'t',name:'Tan'}];
+const tripState={arrangements:[],packing:[],loaded:{arrangements:false,packing:false},loading:{arrangements:false,packing:false},pending:{arrangements:0,packing:0}};
+const packingBaseCategories=['Documents & Money','Bags & Accessories','Clothing & Footwear','Electronics','Toiletries','Medicine','Other'];
+let packingCategories=[...packingBaseCategories];
+const tripTables={arrangements:'japan_arrangements',packing:'japan_packing_items'};
+const tripTabs=[...document.querySelectorAll('.trip-tabs [role=tab]')];
+function tripStatus(kind,text,error=false){const el=document.getElementById(kind+'-status');el.textContent=text;el.dataset.error=String(error);}
+async function tripRequest(table,query='',options={}){
+  const response=await fetch(`${SUPABASE_URL}/rest/v1/${table}${query}`,{...options,headers:{...jsonHeaders,Prefer:'return=representation',...options.headers}});
+  if(!response.ok){
+    let detail;try{detail=await response.json();}catch{detail={};}
+    if(response.status===404||['PGRST205','42P01'].includes(detail.code))throw new Error('The planning tables are not installed yet. Run 01_add_trip_planning.sql and 02_add_trip_debts.sql in Supabase, then press Refresh.');
+    if(response.status===401||response.status===403)throw new Error('Database access was denied. Check the grants and public editing policies in the SQL migration, then press Refresh.');
+    if(response.status===409)throw new Error('This item changed or was deleted on another device. Press Refresh and try again.');
+    throw new Error('Could not save or load data. Check your connection and try again.');
+  }
+  return response.status===204?[]:response.json();
+}
+function tripRefreshButtons(kind){document.getElementById('refresh-'+kind).disabled=tripState.loading[kind]||tripState.pending[kind]>0;if(kind==='packing')document.getElementById('packing-deselect').disabled=tripState.loading.packing||tripState.pending.packing>0||!tripState.packing.some(row=>row.traveler===document.getElementById('packing-traveler').value&&row.packed);}
+async function tripLoad(kind){
+  if(tripState.loading[kind]||tripState.pending[kind])return;
+  tripState.loading[kind]=true;tripRefreshButtons(kind);tripStatus(kind,'Loading…');
+  const form=document.getElementById(kind==='packing'?'packing-form':'arrangement-form');
+  const controls=[...form.elements,...document.querySelectorAll(kind==='packing'?'#packing-rows input, #packing-rows button':'#arrangement-rows input, #arrangement-rows textarea, #arrangement-rows button')];
+  controls.forEach(el=>el.disabled=true);
+  try{tripState[kind]=await tripRequest(tripTables[kind],'?select=*&order=created_at.asc,id.asc');tripState.loaded[kind]=true;tripRender(kind);tripStatus(kind,'');}
+  catch(error){tripStatus(kind,error.message,true);}
+  finally{controls.forEach(el=>el.disabled=false);tripState.loading[kind]=false;tripRefreshButtons(kind);}
+}
+function tripSelectTab(tab,focus=false){
+  tripTabs.forEach(button=>{const selected=button===tab;button.setAttribute('aria-selected',String(selected));button.tabIndex=selected?0:-1;document.getElementById(button.getAttribute('aria-controls')).hidden=!selected;});
+  showAdd.hidden=tab.id!=='tab-attractions';
+  document.getElementById('trip-subtitle').textContent=tab.id==='tab-attractions'?'Places & experiences · tap a star to change a rating':'Orr · Itay · Tan — getting ready for Japan';
+  if(focus)tab.focus();
+  if(tab.id==='tab-debts'){if(!debtState.loaded)debtLoad();return;}
+  const kind=tab.id==='tab-arrangements'?'arrangements':tab.id==='tab-packing'?'packing':null;
+  if(kind&&!tripState.loaded[kind])tripLoad(kind);
+}
+tripTabs.forEach((tab,index)=>{
+  tab.addEventListener('click',()=>tripSelectTab(tab));
+  tab.addEventListener('keydown',event=>{
+    let next=index;
+    if(event.key==='ArrowRight')next=(index+1)%tripTabs.length;
+    else if(event.key==='ArrowLeft')next=(index+tripTabs.length-1)%tripTabs.length;
+    else if(event.key==='Home')next=0;
+    else if(event.key==='End')next=tripTabs.length-1;
+    else return;
+    event.preventDefault();tripSelectTab(tripTabs[next],true);
+  });
+});
+function tripRender(kind){if(kind==='arrangements')tripRenderArrangements();else tripRenderPacking();}
+function tripRenderArrangements(){
+  const body=document.getElementById('arrangement-rows');
+  body.innerHTML=tripState.arrangements.map(row=>`<tr data-id="${esc(row.id)}"><th scope="row"><div class="arrangement-title-row"><span>${esc(row.title)}</span><button class="planning-delete" type="button" data-delete aria-label="Delete ${esc(row.title)} for all travelers">Delete</button></div></th>${tripTravelers.map(person=>`<td><div class="arrangement-cell"><label class="done-label"><input type="checkbox" data-field="done_${person.id}" ${row['done_'+person.id]?'checked':''} aria-label="${esc(person.name)}: ${esc(row.title)} done">Done</label><label class="remarks-label">Remarks for ${esc(person.name)}<textarea class="text-input" maxlength="1200" data-field="remarks_${person.id}" aria-label="${esc(person.name)}: ${esc(row.title)} remarks">${esc(row['remarks_'+person.id])}</textarea></label></div></td>`).join('')}</tr>`).join('');
+  if(!tripState.arrangements.length)body.innerHTML='<tr><td colspan="4">No arrangements yet. Add one above.</td></tr>';
+}
+function packingCategory(row){return row.category||'Other';}
+function packingUpdateCategories(){
+  packingCategories=[...new Set([...packingBaseCategories,...packingCategories,...tripState.packing.map(packingCategory)])];
+  const select=document.getElementById('packing-add-category-select');
+  const previous=select.value;select.innerHTML=packingCategories.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('');select.value=[...select.options].some(o=>o.value===previous)?previous:'Other';
+}
+const collapsedPackingCategories=new Set();
+function updateTravelerVisual(){
+ const selected=document.getElementById('packing-traveler').value;
+ const person=tripTravelers.find(p=>p.id===selected);
+ document.querySelectorAll('.traveler-choice').forEach(button=>{const active=button.dataset.person===selected;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));button.querySelector('small').textContent=active?'Selected ✓':'Select';});
+ document.getElementById('traveler-context').textContent='Editing '+person.name+'’s packing list — changes affect '+person.name+' only.';
+ document.getElementById('packing-add-target').textContent=document.getElementById('packing-all').checked?'New item will be added to all three travelers.':'New item will be added to '+person.name+' only.';
+}
+function tripUpdatePackingProgress(rows){
+  const packed=rows.filter(row=>row.packed).length;
+  document.getElementById('packing-progress').textContent=`${packed} of ${rows.length} packed`;
+  document.getElementById('packing-progress-fill').style.width=(rows.length?100*packed/rows.length:0)+'%';
+}
+function tripRenderPacking(){
+ updateTravelerVisual();
+  packingUpdateCategories();
+  const traveler=document.getElementById('packing-traveler').value;
+  const rows=tripState.packing.filter(row=>row.traveler===traveler);
+  const unpackedOnly=document.getElementById('packing-unpacked-only').checked;
+  tripUpdatePackingProgress(rows);
+  const groups=[...new Set(rows.map(packingCategory))].sort((a,b)=>packingCategories.indexOf(a)-packingCategories.indexOf(b));
+  const html=groups.map(category=>{
+    const items=rows.filter(row=>packingCategory(row)===category);
+    return `<li class="packing-category"><button type="button" data-toggle-category="${esc(category)}" aria-expanded="${!collapsedPackingCategories.has(category)}"><span>${collapsedPackingCategories.has(category)?'▸':'▾'} ${esc(category)}</span><span class="category-count">${items.filter(r=>r.packed).length}/${items.length}</span></button></li>`+(collapsedPackingCategories.has(category)?'':items.filter(row=>!unpackedOnly||!row.packed).map(row=>`<li data-id="${esc(row.id)}"><div class="packing-item-main"><label class="packing-item-label"><input type="checkbox" data-field="packed" ${row.packed?'checked':''}><span>${esc(row.name)}</span></label><select class="filter-control packing-category-select" data-field="category" aria-label="Category for ${esc(row.name)}">${packingCategories.map(c=>`<option value="${esc(c)}" ${c===category?'selected':''}>${esc(c)}</option>`).join('')}</select></div><div class="packing-item-actions"><button class="edit-attraction" type="button" data-rename aria-label="Rename ${esc(row.name)} for ${esc(tripTravelers.find(person=>person.id===traveler).name)}">Edit</button><button class="planning-delete" type="button" data-delete aria-label="Delete ${esc(row.name)} from ${esc(tripTravelers.find(person=>person.id===traveler).name)}">Delete</button></div></li>`).join(''));
+  }).join('');
+  document.getElementById('packing-rows').innerHTML=html||'<li class="packing-empty">No items in this category for this traveler.</li>';
+  tripRefreshButtons('packing');
+}
+
+// Lock the affected row during a write, so refresh or repeated clicks cannot lose edits.
+async function tripEdit(kind,event){
+  const input=event.target.closest('[data-field]');if(!input)return;
+  const container=input.closest('[data-id]');const row=tripState[kind].find(item=>item.id===container.dataset.id);if(!row)return;
+  const field=input.dataset.field;const value=input.type==='checkbox'?input.checked:input.value;
+  if(value===row[field])return;
+  const controls=[...container.querySelectorAll('input,textarea,button')];controls.forEach(el=>el.disabled=true);
+  tripState.pending[kind]++;tripRefreshButtons(kind);tripStatus(kind,'Saving…');
+  try{
+    const updated=await tripRequest(tripTables[kind],`?id=eq.${encodeURIComponent(row.id)}`,{method:'PATCH',body:JSON.stringify({[field]:value})});
+    if(updated.length!==1)throw new Error('This item no longer exists. Press Refresh to update the list.');
+    // Apply only the acknowledged field locally; independent requests may finish in any order.
+    row[field]=updated[0][field];tripStatus(kind,'Saved');if(kind==='packing'&&field==='category')tripRenderPacking();
+    if(kind==='packing'){
+      const rows=tripState.packing.filter(item=>item.traveler===document.getElementById('packing-traveler').value);
+      tripUpdatePackingProgress(rows);
+    }
+  }catch(error){if(input.type==='checkbox')input.checked=row[field];tripStatus(kind,error.message+(input.type==='checkbox'?'':' Your remarks remain in this field; edit the text and leave the field again to retry.'),true);}
+  finally{controls.forEach(el=>el.disabled=false);tripState.pending[kind]--;tripRefreshButtons(kind);}
+}
+async function packingRename(event){
+  const button=event.target.closest('[data-rename]');if(!button)return;
+  if(tripState.pending.packing||tripState.loading.packing){tripStatus('packing','Wait for the current operation to finish.');return;}
+  const container=button.closest('[data-id]');
+  const row=tripState.packing.find(item=>String(item.id)===container.dataset.id);if(!row)return;
+  const name=prompt('Edit packing item name for '+tripTravelers.find(person=>person.id===row.traveler).name+':',row.name);
+  if(name===null)return;
+  const trimmed=name.trim();
+  if(!trimmed||trimmed.length>160){tripStatus('packing','Name must contain 1–160 characters.',true);return;}
+  if(trimmed===row.name)return;
+  tripState.pending.packing++;tripRefreshButtons('packing');
+  container.querySelectorAll('input,select,button').forEach(el=>el.disabled=true);
+  tripStatus('packing','Saving name…');
+  try{
+    const updated=await tripRequest(tripTables.packing,`?id=eq.${encodeURIComponent(row.id)}&traveler=eq.${encodeURIComponent(row.traveler)}`,{method:'PATCH',body:JSON.stringify({name:trimmed})});
+    if(updated.length!==1)throw new Error('Item not found. Refresh the list and try again.');
+    row.name=updated[0].name;
+    tripRenderPacking();tripStatus('packing','Name saved for '+tripTravelers.find(person=>person.id===row.traveler).name);
+  }catch(error){tripStatus('packing',error.message,true);}
+  finally{tripState.pending.packing--;tripRefreshButtons('packing');}
+}
+async function tripDelete(kind,event){
+  const button=event.target.closest('[data-delete]');if(!button)return;
+  if(tripState.pending[kind]||tripState.loading[kind]){tripStatus(kind,'Wait for the current save to finish, then try again.');return;}
+  const container=button.closest('[data-id]');const row=tripState[kind].find(item=>item.id===container.dataset.id);if(!row)return;
+  const question=kind==='arrangements'?`Delete ${row.title} and all three travelers' status and remarks?`:`Delete ${row.name} from ${tripTravelers.find(person=>person.id===row.traveler).name}'s packing list?`;
+  if(!confirm(question))return;
+  // Disable the list during structural changes; its elements will be rebuilt after success.
+  const controls=[...container.parentElement.querySelectorAll('input,textarea,button')];controls.forEach(el=>el.disabled=true);
+  tripState.pending[kind]++;tripRefreshButtons(kind);tripStatus(kind,'Deleting…');
+  try{
+    await tripRequest(tripTables[kind],`?id=eq.${encodeURIComponent(row.id)}`,{method:'DELETE'});
+    tripState[kind]=tripState[kind].filter(item=>item.id!==row.id);tripRender(kind);tripStatus(kind,'Deleted');
+  }catch(error){tripStatus(kind,error.message,true);}
+  finally{controls.forEach(el=>el.disabled=false);tripState.pending[kind]--;tripRefreshButtons(kind);}
+}
+async function tripAdd(kind,event){
+  event.preventDefault();
+  if(tripState.pending[kind]||tripState.loading[kind]){tripStatus(kind,'Wait for the current save to finish, then try again.');return;}
+  if(!tripState.loaded[kind]){tripStatus(kind,'Press Refresh to load this list before adding an item.',true);return;}
+  const form=event.currentTarget;const input=document.getElementById(kind==='packing'?'packing-name':'arrangement-name');const name=input.value.trim();
+  if(!name){tripStatus(kind,'Enter a name first.',true);input.focus();return;}
+  const selected=document.getElementById('packing-traveler').value;
+  const people=document.getElementById('packing-all').checked?tripTravelers.map(person=>person.id):[selected];
+  if(kind==='packing'&&people.length===3&&!confirm('Add '+name+' to all three packing lists?'))return;
+  const payload=kind==='arrangements'?{title:name}:people.map(traveler=>({name,traveler,category:document.getElementById('packing-add-category-select').value||'Other'}));
+  const controls=[...form.elements,...document.querySelectorAll(kind==='packing'?'#packing-rows input, #packing-rows button':'#arrangement-rows input, #arrangement-rows textarea, #arrangement-rows button')];controls.forEach(el=>el.disabled=true);
+  tripState.pending[kind]++;tripRefreshButtons(kind);tripStatus(kind,'Adding…');
+  try{
+    // One bulk insert makes "add to all" atomic. Each traveler gets an independent row.
+    const created=await tripRequest(tripTables[kind],'',{method:'POST',body:JSON.stringify(payload)});
+    tripState[kind].push(...created);tripRender(kind);input.value='';
+    if(kind==='packing')document.getElementById('packing-all').checked=false;
+    tripStatus(kind,'Added');
+  }catch(error){tripStatus(kind,error.message,true);}
+  finally{controls.forEach(el=>el.disabled=false);tripState.pending[kind]--;tripRefreshButtons(kind);input.focus();}
+}
+document.getElementById('arrangement-rows').addEventListener('change',event=>tripEdit('arrangements',event));
+document.getElementById('arrangement-rows').addEventListener('click',event=>tripDelete('arrangements',event));
+document.getElementById('packing-rows').addEventListener('change',event=>tripEdit('packing',event));
+document.getElementById('packing-rows').addEventListener('click',event=>{const toggle=event.target.closest('[data-toggle-category]');if(toggle){const c=toggle.dataset.toggleCategory;collapsedPackingCategories.has(c)?collapsedPackingCategories.delete(c):collapsedPackingCategories.add(c);tripRenderPacking();return;}if(event.target.closest('[data-rename]'))packingRename(event);else tripDelete('packing',event);});
+document.getElementById('arrangement-form').addEventListener('submit',event=>tripAdd('arrangements',event));
+document.getElementById('packing-form').addEventListener('submit',event=>tripAdd('packing',event));
+document.getElementById('packing-unpacked-only').addEventListener('change',tripRenderPacking);
+document.getElementById('packing-expand').addEventListener('click',()=>{collapsedPackingCategories.clear();tripRenderPacking();});
+document.getElementById('packing-collapse').addEventListener('click',()=>{packingCategories.forEach(c=>collapsedPackingCategories.add(c));tripRenderPacking();});
+document.querySelectorAll('.traveler-choice').forEach(button=>button.addEventListener('click',()=>{const select=document.getElementById('packing-traveler');if(tripState.pending.packing||tripState.loading.packing){tripStatus('packing','Wait for the current save to finish.');return;}select.value=button.dataset.person;select.dispatchEvent(new Event('change'));}));
+document.getElementById('packing-all').addEventListener('change',updateTravelerVisual);
+document.getElementById('packing-add-category').addEventListener('click',()=>{const input=document.getElementById('packing-new-category');const category=input.value.trim();if(!category)return;if(category.length>80)return;const existing=packingCategories.find(c=>c.toLowerCase()===category.toLowerCase());if(!existing)packingCategories.push(category);packingUpdateCategories();document.getElementById('packing-add-category-select').value=existing||category;input.value='';tripStatus('packing','Category ready. Assign it to items or select it when adding new items.');});
+document.getElementById('packing-traveler').addEventListener('change',()=>{
+  if(tripState.pending.packing||tripState.loading.packing){document.getElementById('packing-traveler').value=tripState.selectedTraveler||'o';tripStatus('packing','Wait for the current operation to finish.');return;}
+  tripState.selectedTraveler=document.getElementById('packing-traveler').value;document.getElementById('packing-all').checked=false;tripRenderPacking();
+});
+['arrangements','packing'].forEach(kind=>document.getElementById('refresh-'+kind).addEventListener('click',()=>tripLoad(kind)));
+document.getElementById('packing-deselect').addEventListener('click',async()=>{
+  if(tripState.pending.packing||tripState.loading.packing)return;
+  const traveler=document.getElementById('packing-traveler').value;
+  const controls=[...document.querySelectorAll('#packing-form input, #packing-form button, #packing-rows input, #packing-rows button, #packing-traveler')];controls.forEach(el=>el.disabled=true);
+  tripState.pending.packing++;tripRefreshButtons('packing');tripStatus('packing','Deselecting…');
+  try{
+    await tripRequest(tripTables.packing,`?traveler=eq.${traveler}&packed=eq.true`,{method:'PATCH',body:JSON.stringify({packed:false})});
+    tripState.packing.filter(row=>row.traveler===traveler).forEach(row=>row.packed=false);tripRenderPacking();tripStatus('packing','All items deselected for '+tripTravelers.find(person=>person.id===traveler).name);
+  }catch(error){tripStatus('packing',error.message,true);}
+  finally{controls.forEach(el=>el.disabled=false);tripState.pending.packing--;tripRefreshButtons('packing');}
+});
+
+</script>
+<script>
+const debtState={rows:[],loaded:false,loading:false,pending:false};
+const debtTable='japan_trip_payments';
+function debtPerson(id){return tripTravelers.find(person=>person.id===id)?.name||id;}
+function debtMinor(value){
+  // Parse decimal strings into integer agorot; never calculate debts with floats.
+  const text=String(value).trim();if(!/^\d{1,8}(\.\d{1,2})?$/.test(text))throw new Error('Enter a positive amount with at most two decimal places.');
+  const [whole,fraction='']=text.split('.');const result=Number(whole)*100+Number(fraction.padEnd(2,'0'));
+  if(result<=0)throw new Error('The amount must be greater than zero.');return result;
+}
+function debtDecimal(minor){return `${Math.floor(minor/100)}.${String(minor%100).padStart(2,'0')}`;}
+function debtMoney(minor,currency){return new Intl.NumberFormat('en-US',{minimumFractionDigits:currency==='JPY'?0:2,maximumFractionDigits:currency==='JPY'?0:2}).format(minor/100)+' '+(currency==='JPY'?'JPY*':'ILS');}
+function debtSettlements(rows,currency){
+  const balances={t:0,i:0,o:0};
+  for(const row of rows){
+    const converted=row.currency==='JPY'&&row.ils_amount!==null&&row.ils_amount!==undefined;
+    const effectiveCurrency=converted?'ILS':row.currency;if(effectiveCurrency!==currency)continue;
+    const amount=debtMinor(converted?row.ils_amount:row.amount);
+    balances[row.payer]+=amount;balances[row.beneficiary]-=amount;
+  }
+  const creditors=tripTravelers.filter(person=>balances[person.id]>0).map(person=>({id:person.id,amount:balances[person.id]}));
+  const debtors=tripTravelers.filter(person=>balances[person.id]<0).map(person=>({id:person.id,amount:-balances[person.id]}));
+  const transfers=[];let i=0,j=0;
+  while(i<debtors.length&&j<creditors.length){const amount=Math.min(debtors[i].amount,creditors[j].amount);transfers.push({from:debtors[i].id,to:creditors[j].id,amount});debtors[i].amount-=amount;creditors[j].amount-=amount;if(!debtors[i].amount)i++;if(!creditors[j].amount)j++;}
+  return transfers;
+}
+function debtBusy(value){
+  debtState.pending=value;
+  document.querySelectorAll('#debt-form input, #debt-form select, #debt-form button, #debt-rows input, #debt-rows button, #refresh-debts').forEach(el=>el.disabled=value||debtState.loading);
+}
+function debtRender(){
+  document.getElementById('debt-settlements').innerHTML=['ILS','JPY'].map(currency=>{
+    const transfers=debtSettlements(debtState.rows,currency);
+    return `<section class="debt-summary"><h3>${currency==='JPY'?'JPY* · not yet converted':'ILS · ready to settle'}</h3>${transfers.length?`<ul>${transfers.map(item=>`<li><strong>${esc(debtPerson(item.from))}</strong> pays <strong>${esc(debtPerson(item.to))}</strong> ${debtMoney(item.amount,currency)}</li>`).join('')}</ul>`:'<p>No outstanding balance.</p>'}</section>`;
+  }).join('');
+  document.getElementById('debt-rows').innerHTML=debtState.rows.length?debtState.rows.map(row=>{
+    const converted=row.currency==='JPY'&&row.ils_amount!==null&&row.ils_amount!==undefined;
+    return `<li class="debt-entry" data-debt-id="${esc(row.id)}"><div class="debt-entry-top"><div><strong>${esc(debtPerson(row.payer))} paid for ${esc(debtPerson(row.beneficiary))}</strong><p>${converted?debtMoney(debtMinor(row.amount),row.currency).replace('JPY*','JPY (original)'):debtMoney(debtMinor(row.amount),row.currency)}${converted?` → <strong>${debtMoney(debtMinor(row.ils_amount),'ILS')}</strong>`:''}</p>${row.note?`<p>${esc(row.note)}</p>`:''}</div><button type="button" class="planning-delete" data-debt-delete>Delete</button></div>${row.currency==='JPY'?`<form class="debt-conversion"><label>Actual ILS equivalent<input class="text-input" name="ils_amount" aria-label="ILS equivalent for ${esc(debtPerson(row.payer))}'s payment for ${esc(debtPerson(row.beneficiary))}" type="number" min="0.01" max="99999999.99" step="0.01" inputmode="decimal" required value="${converted?esc(row.ils_amount):''}"></label><button class="save-attraction" type="submit">${converted?'Update ILS':'Replace with ILS'}</button>${converted?'<button class="cancel-attraction" type="button" data-debt-unconvert>Back to JPY*</button>':''}</form>`:''}</li>`;
+  }).join(''):'<li class="debt-note-empty">No payments recorded yet.</li>';
+  debtBusy(debtState.pending);
+}
+async function debtLoad(){
+  if(debtState.loading||debtState.pending)return;debtState.loading=true;debtBusy(false);tripStatus('debts','Loading…');
+  try{debtState.rows=await tripRequest(debtTable,'?select=*&order=created_at.asc,id.asc');debtState.loaded=true;debtRender();tripStatus('debts','');}
+  catch(error){tripStatus('debts',error.message,true);}
+  finally{debtState.loading=false;debtBusy(false);}
+}
+async function debtMutation(action,success){
+  if(debtState.pending||debtState.loading)return;
+  if(!debtState.loaded){tripStatus('debts','Press Refresh to load payments before making changes.',true);return;}
+  debtBusy(true);tripStatus('debts','Saving…');
+  try{await action();debtRender();tripStatus('debts',success);}
+  catch(error){tripStatus('debts',error.message,true);}
+  finally{debtBusy(false);}
+}
+document.getElementById('debt-form').addEventListener('submit',async event=>{
+  event.preventDefault();
+  let amount;const currency=document.getElementById('debt-currency').value;
+  try{amount=debtMinor(document.getElementById('debt-amount').value);if(currency==='JPY'&&amount%100)throw new Error('Enter a whole-yen amount for JPY*.');}catch(error){tripStatus('debts',error.message,true);return;}
+  const payer=document.getElementById('debt-payer').value,beneficiary=document.getElementById('debt-beneficiary').value;
+  if(payer===beneficiary){tripStatus('debts','Choose two different travelers.',true);return;}
+  const note=document.getElementById('debt-note').value.trim();
+  await debtMutation(async()=>{
+    const created=await tripRequest(debtTable,'',{method:'POST',body:JSON.stringify({payer,beneficiary,currency,amount:debtDecimal(amount),note})});debtState.rows.push(...created);document.getElementById('debt-amount').value='';document.getElementById('debt-note').value='';
+  },'Payment added');
+});
+document.getElementById('debt-currency').addEventListener('change',()=>{const yen=document.getElementById('debt-currency').value==='JPY';const amount=document.getElementById('debt-amount');amount.step=yen?'1':'0.01';amount.min=yen?'1':'0.01';amount.max=yen?'99999999':'99999999.99';});
+async function debtConvert(container,value){
+  await debtMutation(async()=>{
+    const id=container.dataset.debtId;
+    const updated=await tripRequest(debtTable,`?id=eq.${encodeURIComponent(id)}&currency=eq.JPY`,{method:'PATCH',body:JSON.stringify({ils_amount:value})});
+    if(updated.length!==1)throw new Error('This payment no longer exists. Press Refresh to update the list.');
+    const row=debtState.rows.find(item=>item.id===id);if(row)row.ils_amount=updated[0].ils_amount;
+  },value===null?'Returned to provisional JPY*':'ILS equivalent saved; settlement recalculated');
+}
+document.getElementById('debt-rows').addEventListener('submit',async event=>{
+  const form=event.target.closest('.debt-conversion');if(!form)return;event.preventDefault();
+  let value;try{value=debtDecimal(debtMinor(form.elements.ils_amount.value));}catch(error){tripStatus('debts',error.message,true);return;}
+  await debtConvert(form.closest('[data-debt-id]'),value);
+});
+document.getElementById('debt-rows').addEventListener('click',async event=>{
+  const unconvert=event.target.closest('[data-debt-unconvert]');if(unconvert){await debtConvert(unconvert.closest('[data-debt-id]'),null);return;}
+  const button=event.target.closest('[data-debt-delete]');if(!button)return;
+  if(debtState.pending||debtState.loading)return;
+  if(!confirm('Delete this payment? Settlement amounts will be recalculated.'))return;
+  const id=button.closest('[data-debt-id]').dataset.debtId;
+  await debtMutation(async()=>{await tripRequest(debtTable,`?id=eq.${encodeURIComponent(id)}`,{method:'DELETE'});debtState.rows=debtState.rows.filter(row=>row.id!==id);},'Payment deleted; settlement recalculated');
+});
+document.getElementById('refresh-debts').addEventListener('click',debtLoad);
+
+</script>
+
+<script>
+// Passwords are checked by Supabase Auth; no password is stored in this HTML.
+const authForm=document.getElementById('auth-form');
+const authStatus=document.getElementById('auth-status');
+const authButton=document.getElementById('auth-submit');
+const authStorageKey='japan-trip-supabase-session-v1';
+let authSession=null;
+function saveAuthSession(session){
+ authSession=session;tripAccessToken=session?.access_token||null;
+ if(session)localStorage.setItem(authStorageKey,JSON.stringify(session));
+ else localStorage.removeItem(authStorageKey);
+}
+async function authCall(path,payload){
+ const response=await nativeFetch(SUPABASE_URL+'/auth/v1/'+path,{method:'POST',headers:{apikey:SUPABASE_KEY,'Content-Type':'application/json'},body:JSON.stringify(payload)});
+ const data=await response.json();
+ if(!response.ok)throw new Error(data.msg||data.error_description||data.message||'Login failed');
+ return data;
+}
+function authShowApp(){
+ document.getElementById('auth-screen').hidden=true;
+ document.getElementById('protected-app').hidden=false;
+ authStatus.textContent='';
+ load();
+ const selected=document.querySelector('.trip-tabs [role=tab][aria-selected=true]');
+ if(selected)tripSelectTab(selected);
+}
+function authShowLogin(){
+ document.getElementById('protected-app').hidden=true;
+ document.getElementById('auth-screen').hidden=false;
+ document.getElementById('auth-password').value='';
+}
+async function authRefresh(){
+ if(!authSession?.refresh_token)throw new Error('No saved session');
+ const next=await authCall('token?grant_type=refresh_token',{refresh_token:authSession.refresh_token});
+ saveAuthSession(next);return next;
+}
+authForm.addEventListener('submit',async event=>{
+ event.preventDefault();authButton.disabled=true;authStatus.textContent='Signing in…';
+ try{const data=await authCall('token?grant_type=password',{email:document.getElementById('auth-email').value.trim(),password:document.getElementById('auth-password').value});saveAuthSession(data);authShowApp();}
+ catch(error){authStatus.textContent=error.message;}finally{authButton.disabled=false;}
+});
+document.getElementById('auth-logout').addEventListener('click',async()=>{
+ const old=tripAccessToken;saveAuthSession(null);authShowLogin();
+ if(old)nativeFetch(SUPABASE_URL+'/auth/v1/logout',{method:'POST',headers:{apikey:SUPABASE_KEY,Authorization:'Bearer '+old}}).catch(()=>{});
+});
+(async()=>{
+ try{const stored=JSON.parse(localStorage.getItem(authStorageKey)||'null');
+ if(!stored)return;saveAuthSession(stored);
+ if(!stored.expires_at||stored.expires_at*1000<Date.now()+60000)await authRefresh();
+ authShowApp();}catch(error){saveAuthSession(null);authShowLogin();}
+})();
+// Refresh the token before it expires; existing edits remain available.
+setInterval(async()=>{if(!authSession)return;if((authSession.expires_at||0)*1000<Date.now()+120000){try{await authRefresh();}catch{saveAuthSession(null);authShowLogin();}}},60000);
+</script>
+</body>
+</html>
